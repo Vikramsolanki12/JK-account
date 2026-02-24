@@ -1,0 +1,114 @@
+/* ================= AUTH CONTAINER ================= */
+.auth-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+/* ================= AUTH CARD ================= */
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+
+.auth-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= TITLE ================= */
+.auth-card h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+/* ================= ROLE SELECTION ================= */
+.role-selection {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.role-selection button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  background: #f5f7fa;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.role-selection button:hover {
+  background: #e8f5e9;
+  border-color: #4caf50;
+}
+
+/* Active Role */
+.role-selection button.active {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  border: none;
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* ================= GOOGLE BUTTON ================= */
+.google-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  color: white;
+  transition: 0.25s ease;
+}
+
+.google-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(46,125,50,0.35);
+}
+
+/* ================= LOGOUT BUTTON ================= */
+.auth-card button:not(.google-btn):not(.active) {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #ef5350;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.auth-card button:not(.google-btn):not(.active):hover {
+  background: #d32f2f;
+}
+
+/* ================= USER INFO ================= */
+.auth-card p {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 500px) {
+  .auth-card {
+    padding: 25px 20px;
+  }
+
+  .role-selection {
+    flex-direction: column;
+  }
+}
